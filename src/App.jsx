@@ -1,12 +1,27 @@
-export default function App() {
+import { createBrowserRouter, RouterProvider } from "react-router"
+import Home from "./components/Home";
+import ViewBooks from "./components/ViewBooks";
+import CreateBook from "./components/CreateBook";
+import EditBook from "./components/EditBook";
+import BooksPage from "./Pages/BooksPage";
+import NotFound from "./components/NotFound";
+
+const abcBookRouter = createBrowserRouter([
+  {path: "/", element: <Home />},
+  {path: "/viewbooks", element: <ViewBooks />},
+  {path: "/createbook", element: <CreateBook />},
+  {path: "/editbook", element: <EditBook />},
+  {path: "/bookspage", element: <BooksPage />},
+  {path: "*", element: <NotFound />},
+
+]);
+ function App() {
   return (
     <>
-      <div>
-        <h1 className="text-3xl text-center font-extrabold">Welcome to Home page</h1>
-      </div>
-
+      <RouterProvider router={abcBookRouter} />
     </>
   )
 }
+export default App
 
 
