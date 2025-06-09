@@ -6,8 +6,11 @@ export default function BooksPage() {
   return (
     <>
       <Navbar />
-        <h1>Books Page</h1>
-        <p>Welcome to the Books Page!</p>
+        <div>
+          <h1>Books Page</h1>
+          <p>Welcome to the Books Page!</p>
+        </div>
+        
       <Footer />
     </>
   );
