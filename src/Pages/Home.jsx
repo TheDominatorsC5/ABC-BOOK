@@ -1,6 +1,6 @@
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
-import BookCards from '../Components/BookCards';
+import HomeCards from '../Components/HomeCards';
 import { useState } from 'react';
 
 
@@ -83,7 +83,8 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <BookCards books={books} />
+
+            <HomeCards books={books} />
             <Footer />
         </>
     )
