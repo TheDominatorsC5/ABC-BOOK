@@ -35,7 +35,7 @@ export default function Navbar() {
 
 
         </div>
-        <div className="flex items-center"> <button className="text-white bg-orange-600 py-2 px-6 rounded-2xl text-sm ">Sign In</button>
+        <div className="flex items-center"> <button className="text-white bg-orange-600 hover:bg-red-700 py-2 px-6 rounded-2xl text-sm ">Sign In</button>
         </div>
       </div>
       <nav>
