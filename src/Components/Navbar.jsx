@@ -1,12 +1,13 @@
 import logo from "../assets/images/logo.png";
+import { Link } from "react-router";
 
 export default function Navbar() {
   return (
     <header>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between mb-5">
         <div className="flex items-center gap-1">
           <div>
-            <img className="w-60 h-20 flex shrink-0" src={logo} alt="Logo" />
+            <img className="w-70 h-35 flex shrink-0" src={logo} alt="Logo" />
           </div>
 
           <div className="hidden w-full max-w-md mx-6 md:flex items-center">
@@ -41,11 +42,10 @@ export default function Navbar() {
       <nav>
       
           <ul className="flex justify-center gap-5 bg-red-100 p-2">
-            <li><a className="text-gray-700 hover:text-red-600 font-semibold text-sm" href="#">Home</a></li>
-            <li><a className="text-gray-700 hover:text-red-600 font-semibold text-sm" href="#">Categories</a></li>
-            <li><a className="text-gray-700 hover:text-red-600 font-semibold text-sm" href="#">About</a></li>
-            <li><a className="text-gray-700 hover:text-red-600 font-semibold text-sm" href="#">Pages</a></li>
-            <li><a className="text-gray-700 hover:text-red-600 font-semibold text-sm" href="#">Contact</a></li>
+            <li><Link className="text-gray-700 hover:text-red-600 font-semibold text-sm" to="/">Home</Link></li>
+            <li><Link className="text-gray-700 hover:text-red-600 font-semibold text-sm" to="/bookspage">Categories</Link></li>
+            <li><Link className="text-gray-700 hover:text-red-600 font-semibold text-sm" to="/viewbook">View Book</Link></li>
+            <li><a className="text-gray-700 hover:text-red-600 font-semibold text-sm" href="#footer">Contact</a></li>
           </ul>
         
       </nav>
