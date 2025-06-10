@@ -1,4 +1,3 @@
-import lemonCase from '../assets/lemon-case-image.png'
 import { Star } from "lucide-react";
 
 export default function BookCards({ books }) {

@@ -1,7 +1,7 @@
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
-import kidsBanner from "../assets/kids-blank-banner.jpg";
-import BookCards from '../Components/HomeCards';
+import kidsBanner from "../assets/images/kids-blank-banner.jpg";
+import BooksCards from '../Components/BooksCards';
 
 export default function BooksPage() {
   // Dummy book array (for now, just to repeat the same BookCard)
@@ -21,7 +21,7 @@ export default function BooksPage() {
       <section>
         <div className="book-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 p-4">
           {books.map((item, index) => (
-            <BookCards key={index} />
+            <BooksCards key={index} />
           ))}
         </div>
       </section>
