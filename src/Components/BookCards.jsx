@@ -1,14 +1,17 @@
+import lemonCase from '../assets/lemon-case-image.png'
 export default function BookCards({ books }) {
+
   return (
-    <div className="book-cards">
-      {books.map((book) => (
-        <div key={book.id} className="book-card">
-          <h2>{book.title}</h2>
-          <p>{book.author}</p>
-          <p>{book.description}</p>
-          <p>Published: {book.publishedDate}</p>
-        </div>
-      ))}
+    <div className="book-card border rounded-lg p-4 shadow-md bg-white text-gray-800">
+      <img
+        src={lemonCase}
+        alt= 'The lemon suite case'
+        className="w-full h-48 object-cover mb-4 rounded"
+      />
+      <h2 className="text-xl font-bold">The Lemon Suite case</h2>
+      <p className="text-md font-medium">By: Peggy Oppong</p>
+      <p>25$</p>
+      <p className="text-sm text-gray-500 mt-1">Published: 18/01/24</p>
     </div>
   );
 }
