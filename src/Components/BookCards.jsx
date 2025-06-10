@@ -1,17 +1,27 @@
 import lemonCase from '../assets/lemon-case-image.png'
+import { Star } from "lucide-react";
+
 export default function BookCards({ books }) {
 
   return (
-    <div className="book-card border rounded-lg p-4 shadow-md bg-white text-gray-800">
-      <img
-        src={lemonCase}
-        alt= 'The lemon suite case'
-        className="w-full h-48 object-cover mb-4 rounded"
-      />
-      <h2 className="text-xl font-bold">The Lemon Suite case</h2>
-      <p className="text-md font-medium">By: Peggy Oppong</p>
-      <p>25$</p>
-      <p className="text-sm text-gray-500 mt-1">Published: 18/01/24</p>
-    </div>
+    <section className="py-20 grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto max-w-6xl">
+      {books.map((book) => (
+        <div key={book.id} className=" rounded-lg shadow-md overflow-hidden bg-gray-100">
+          <a href="#">
+            <img src={book.imageUrl} alt={book.title} className="w-full h-96 object-cover rounded-t-md" />
+          </a>
+          <div className="bg-white p-4">
+            <a href="#">
+              <h2 className="text-xl font-semibold mb-2">{book.title}</h2>
+            </a>
+            <p className="text-gray-700 mb-2 truncate">{book.description}</p>
+            <p className="text-gray-500 mb-2">Author: {book.author}</p>
+            <p className="text-gray-500 mb-2">Published: {new Date(book.publishedDate).toLocaleDateString()}</p>
+            <p className="text-yellow-500">Rating: {book.rating}</p>
+            <Star className="inline-block text-yellow-500" fill="oklch(79.5% 0.184 86.047)" />
+          </div>
+        </div>
+      ))}
+    </section>
   );
 }
