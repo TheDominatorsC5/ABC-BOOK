@@ -5,7 +5,11 @@ export default function ViewBook() {
   return (
     <>
       <Navbar />
-        <h1>View Book</h1>
+        <div>
+          <h1>View Book</h1>
+          <p>Author</p>
+          <p>Price</p>
+        </div>
       <Footer />
     </>
   );

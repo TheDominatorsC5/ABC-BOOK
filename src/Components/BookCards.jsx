@@ -1,6 +1,8 @@
+import lemonCase from '../assets/lemon-case-image.png'
 import { Star } from "lucide-react";
 
 export default function BookCards({ books }) {
+
   return (
     <section className="py-20 grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto max-w-6xl">
       {books.map((book) => (
