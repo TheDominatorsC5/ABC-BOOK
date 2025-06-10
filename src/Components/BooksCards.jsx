@@ -1,4 +1,6 @@
-import lemonCase from '../assets/images/lemon-case-image.png'
+import lemonCase from '../assets/images/lemon-case-image.png';
+import { Link } from 'react-router';
+
 export default function BooksCards({ books }) {
 
   return (
@@ -10,8 +12,14 @@ export default function BooksCards({ books }) {
       />
       <h2 className="text-xl font-bold">The Lemon Suite case</h2>
       <p className="text-md font-medium">By: Peggy Oppong</p>
-      <p>25$</p>
-      <p className="text-sm text-gray-500 mt-1">Published: 18/01/24</p>
-    </div>
+      
+      <div className='flex justify-between items-center'>
+          <div>
+              <p>25$</p>
+              <p className="text-sm text-gray-500 mt-1">Published: <br />18/01/24</p>
+          </div>
+          <div><button className='text-white bg-orange-600 hover:bg-red-700 py-2 px-6 rounded-2xl text-sm mt-5'><Link to="/viewbook">View Book</Link></button></div>
+              </div>
+      </div>
   );
 }

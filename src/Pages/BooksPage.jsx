@@ -2,6 +2,7 @@ import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import kidsBanner from "../assets/images/kids-blank-banner.jpg";
 import BooksCards from '../Components/BooksCards';
+import {Plus} from "lucide-react";
 
 export default function BooksPage() {
   // Dummy book array (for now, just to repeat the same BookCard)
@@ -16,10 +17,11 @@ export default function BooksPage() {
             <h1 className='text-3xl font-bold text-center mt-4'>Books Page</h1>
             <p className='text-2xl font font-semibold text-center'>Welcome to the ABC Books Page!</p>
           </div>
+          <div><Plus className="text-red-500" /></div>
         </section>
 
       <section>
-        <div className="book-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 p-4">
+        <div className="book-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4 mx-8">
           {books.map((item, index) => (
             <BooksCards key={index} />
           ))}
