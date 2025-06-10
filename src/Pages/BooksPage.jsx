@@ -1,7 +1,7 @@
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import kidsBanner from "../assets/kids-blank-banner.jpg";
-import BookCards from '../Components/BookCards';
+import BookCards from '../Components/HomeCards';
 
 export default function BooksPage() {
   // Dummy book array (for now, just to repeat the same BookCard)
