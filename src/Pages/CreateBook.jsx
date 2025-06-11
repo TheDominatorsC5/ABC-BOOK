@@ -1,7 +1,26 @@
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import { apiClient } from '../api/client';
 
 export default function ViewBook() {
+  const postBook = (event) => {
+    event.preventDefault();
+    // Collect form input
+    const data = new FormData(event.target);
+    // Post data to API
+    apiClient.post("/books", data, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
   return (
     <>
       <Navbar />
@@ -12,12 +31,17 @@ export default function ViewBook() {
             <img src="https://preview.colorlib.com/theme/abcbook/assets/img/gallery/best-books1.jpg" alt=" book cover" />
           </div>
 
-          <form id="" class="flex flex-col justify-around items-start mt-10 h-[50vh] w-[95%] mx-auto">
+          <form onSubmit={postBook} id="" class="flex flex-col justify-around items-start mt-10 h-[50vh] w-[95%] mx-auto">
             <p className='text-2xl text-white font-semibold pb-6'>Create Book</p>
             <div className='flex flex-col w-[75%]'>
-              <input type="text" name="" id="" placeholder='Book Title' className='w-full bg-white p-2 rounded-lg' />
-              <input type="text" name="" id="" placeholder='Author' className='w-full bg-white p-2 rounded-lg mt-2' />
-              <select name="type" id="type" className="bg-white p-2 rounded-lg mt-2">
+
+              <input type="text" name="title" id="" placeholder='Book Title' className='w-full bg-white p-2 rounded-lg' />
+
+              <input type="text" name="author" id="" placeholder='Author' className='w-full bg-white p-2 rounded-lg mt-2' />
+
+              <input type="text" name="year" id="" placeholder='Publication Year' className='w-full bg-white p-2 rounded-lg mt-2' />
+
+              {/* <select name="type" id="type" className="bg-white p-2 rounded-lg mt-2">
                 <option selected disabled>Choose Category</option>
                 <option value="drama">Anime</option>
                 <option value="tech">Adventure</option>
@@ -29,24 +53,22 @@ export default function ViewBook() {
                 <option value="tech">Learning ABCs</option>
                 <option value="tech">History</option>
                 <option value="tech">Picture Books</option>
-              </select>
+              </select> */}
 
-              <input type="text" name="" id="" placeholder='Description' className='w-full h-[15vh] bg-white p-2 rounded-lg mt-2' />
+              <input type="text" name="" id="" placeholder='Description' className='w-full h-[10vh] bg-white p-2 rounded-lg mt-2' />
 
             </div>
 
-          <form className="flex justify-center items-center text-sm gap-2 pt-12">
-                    <input type="file" placeholder="choose file" name="" className="bg-white border-1 px-6 py-3 text-zinc-500 rounded-md cursor-pointer" />
+            <div className='pt-6'>
+              <input type="text" placeholder="Choose file URL" name="image" className="bg-white border-1 px-6 py-3 text-zinc-500 rounded-md cursor-pointer" />
 
-                    <button type="submit" className="border-1 px-8 py-3 border-radius- text-white rounded-md hover:bg-white hover:text-[#FF1616] cursor-pointer">Add Book</button>
-                </form>
+              <button type="submit" className="border-1 px-6 py-3 border-radius text-white rounded-md hover:bg-white hover:text-[#FF1616] cursor-pointer ml-4">Add Book</button>
 
+            </div>
+            
           </form>
 
-
-
         </div>
-
 
       </section>
       <Footer />
