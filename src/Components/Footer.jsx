@@ -1,4 +1,4 @@
-import { Search } from "lucide-react";
+import { Search, Mail, PhoneCall } from "lucide-react";
 import logo from "../assets/images/logo.png";
 import { Link } from "react-router";
 
@@ -20,17 +20,17 @@ export default function Navbar() {
 
 
             <div className="flex gap-4 items-center text-gray-70 ">
-              <div className="flex justify-between items-center w-10 h-10 border-1 border-gray-400 rounded-full text-gray-400 hover:text-red-600">
+              <div className="flex justify-between items-center w-10 h-10 border-1 border-gray-400 rounded-full text-gray-400 hover:text-red-600 hover:scale-125 transition-transform duration-600 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full lucide lucide-facebook-icon lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
               </div>
-              <div className="flex justify-between items-center w-10 h-10 border-1 border-gray-400 rounded-full text-gray-400 hover:text-red-600">
+              <div className="flex justify-between items-center w-10 h-10 border-1 border-gray-400 rounded-full text-gray-400 hover:text-red-600 hover:scale-125 transition-transform duration-600 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class=" w-full lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg></div>
 
-              <div className="flex justify-between items-center w-10 h-10 border-1 border-gray-400 rounded-full text-gray-400 hover:text-red-600">
+              <div className="flex justify-between items-center w-10 h-10 border-1 border-gray-400 rounded-full text-gray-400 hover:text-red-600 hover:scale-125 transition-transform duration-600 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full lucide lucide-linkedin-icon lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg></div>
 
 
-              <div className="flex justify-between items-center w-10 h-10 border-1 border-gray-400 rounded-full text-gray-400 hover:text-red-600">
+              <div className="flex justify-between items-center w-10 h-10 border-1 border-gray-400 rounded-full text-gray-400 hover:text-red-600 hover:scale-125 transition-transform duration-600 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full lucide lucide-youtube-icon lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" /><path d="m10 15 5-3-5-3z" className="size-3" /></svg></div>
             </div>
           </div>
@@ -74,9 +74,9 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className="text-gray-700 font-bold text-center mt-10">
-        <h4 className=" hover:text-red-600 hover:underline">Email: abcchildrensbookstore@gmail.com</h4>
-        <h4 className=" hover:text-red-600 hover:underline">Phone: +233 5473 89723</h4>
+      <div className="text-gray-700 font-bold flex flex-col items-center gap-5">
+        <h4 className=" hover:text-red-600 hover:underline"><Mail />Email: abcchildrensbookstore@gmail.com</h4>
+        <h4 className=" hover:text-red-600 hover:underline"><PhoneCall />Phone: +233 5473 89723</h4>
       </div>
       
       <p className="p-3 text-center text-xs mt-10 text-black">Copyright© 2025 All rights reserved | by ABC Children's Bookstore</p>

@@ -1,3 +1,4 @@
+import { House, LibraryBig, BookOpen, Contact, CircleUserRound } from 'lucide-react';
 import logo from "../assets/images/logo.png";
 import { Link } from "react-router";
 
@@ -36,18 +37,18 @@ export default function Navbar() {
 
 
         </div>
-        <div className="flex items-center"> <button className="text-white bg-orange-600 hover:bg-red-700 py-2 px-6 rounded-2xl text-sm ">Sign In</button>
+        <div className="flex items-center gap-2.5"> <button className="text-white bg-orange-600 hover:bg-red-700 py-2 px-6 rounded-2xl text-sm ">Sign In</button><CircleUserRound className='hover-bg-red-600 text-gray-700 hover:text-red-600 hover:scale-125 transition-transform duration-600 ease-in-out' />
         </div>
       </div>
       <nav>
-      
-          <ul className="flex justify-center gap-5 bg-red-100 p-2">
-            <li><Link className="text-gray-700 hover:text-red-600 font-semibold text-sm" to="/">Home</Link></li>
-            <li><Link className="text-gray-700 hover:text-red-600 font-semibold text-sm" to="/bookspage">Categories</Link></li>
-            <li><Link className="text-gray-700 hover:text-red-600 font-semibold text-sm" to="/viewbook">View Book</Link></li>
-            <li><a className="text-gray-700 hover:text-red-600 font-semibold text-sm" href="#footer">Contact</a></li>
-          </ul>
-        
+
+        <ul className="flex justify-center gap-15 bg-red-100 p-2">
+          <li className="hover:scale-125 transition-transform duration-600 ease-in-out"><Link className="font-semibold text-sm text-gray-700 hover:text-red-600 " to="/"><House /> Home</Link></li>
+          <li className='hover:scale-125 transition-transform duration-600 ease-in-out'><Link className="text-gray-700 hover:text-red-600 font-semibold text-sm" to="/bookspage"><LibraryBig />Categories</Link></li>
+          <li className='hover:scale-125 transition-transform duration-600 ease-in-out'><Link className="text-gray-700 hover:text-red-600 font-semibold text-sm" to="/viewbook"><BookOpen />Book</Link></li>
+          <li className='hover:scale-125 transition-transform duration-600 ease-in-out'><a className="text-gray-700 hover:text-red-600 font-semibold text-sm" href="#footer"><Contact />Contact</a></li>
+        </ul>
+
       </nav>
     </header>
   );
