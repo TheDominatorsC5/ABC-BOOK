@@ -25,20 +25,25 @@ export default function ViewBook() {
 
               <div className='flex gap-10 mt-12 mx-4 w-10'>
 
-                <Link className='hover:text-red-600' to="#">
+                <Link className='hover:text-red-600 hover:scale-125 transition-transform duration-600 ease-in-out' to="#">
                   <ShoppingCart />
                 </Link>
 
-                <Link className='hover:text-red-600' to="/editbook">
+                <Link className='hover:text-red-600 hover:scale-125 transition-transform duration-600 ease-in-out' to="/editbook">
                   <SquarePen />
                 </Link>
 
-                <Link className='hover:text-red-600' to="#">
+                <Link className='hover:text-red-600 hover:scale-125 transition-transform duration-600 ease-in-out' to="#">
                   <Trash2 />
                 </Link>
 
               </div>
             </div>
+          </div>
+          <div>
+            <h2  className='text-center text-3xl font-bold text-slate-600 underline m-6'>Description</h2>
+
+            <p className='w-[60%] mx-auto mb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, eaque! Eum beatae aliquam at adipisci tempore error exercitationem praesentium molestiae amet, expedita autem veniam voluptate tenetur in sit magnam, ipsam ab! Necessitatibus consequatur animi aperiam similique nobis illum, commodi maxime unde natus maiores itaque laudantium recusandae asperiores odit placeat nam!</p>
           </div>
         </section>
 
