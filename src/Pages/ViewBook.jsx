@@ -18,7 +18,7 @@ export default function ViewBook() {
             </div>
 
             <div className='text-slate-800'>
-              <h1 className='text-5xl font-bold'>The lemon suite case</h1>
+              <h1 className='text-4xl font-bold'>The lemon suite case</h1>
               <p className='text-2xl font-semibold mt-2'>By: Peggy Oppong</p>
               <p className='font-semibold mt-2 mx-8 text-lg'>25$</p>
               <p className=" text-slate-700 mt-1 font-semibold">Published: 18/01/24</p>

@@ -20,10 +20,10 @@ export default function BooksPage() {
             <h1 className='text-3xl font-bold text-center mt-4'>Books Page</h1>
             <p className='text-2xl font font-semibold text-center'>Welcome to the ABC Books Page!</p>
           </div>
-          <div className=''>
-            <Link to="/createbook">
-              <Plus className="text-red-500 border-1 rounded-full stroke-2 size-17 hover:text-red-700" />
-              <p className='text-sm font-semibold mt-2 text-red-800'>Add Book</p>
+          <div>
+            <Link to="/createbook" className="group block text-center">
+              <Plus className="text-slate-700 border-1 rounded-full stroke-2 size-17 group-hover:text-red-700 mx-auto" />
+              <p className='text-sm font-semibold mt-2 text-slate-700 group-hover:text-red-700 mx-auto'>Add Book</p>
             </Link>
           </div>
         </div>
