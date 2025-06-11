@@ -6,19 +6,36 @@ export default function EditBook() {
         <>
             <Navbar />
             <section>
-                <div className='flex bg-[#FF1616] w-[60%] mx-auto my-6'>
+                <div className='flex flex-col lg:flex-row bg-[#FF1616] w-[90%] lg:w-[80%] xl:w-[60%] mx-auto my-6 overflow-hidden'>
 
-                    <div id='edit-image' className='items-start w-[70%] py-6 pl-14 mt-10'>
-                        <img src="https://preview.colorlib.com/theme/abcbook/assets/img/gallery/best_selling5.jpg" alt=" book cover" />
+                    <div id='edit-image' className='w-full lg:w-[50%] flex justify-center items-start p-6'>
+                        <img src="https://preview.colorlib.com/theme/abcbook/assets/img/gallery/best_selling5.jpg" alt=" book cover" className='w-full h-auto object-cover rounded-lg' />
                     </div>
 
-                    <form id="" class="flex flex-col justify-around items-start mt-10 h-[60vh] w-[95%] mx-auto">
-                        <div className='flex flex-col w-[75%]'>
-                            <p className='text-2xl text-white font-semibold pb-6'>Edit Details</p>
+                    <form id="" className="flex flex-col justify-around items-start w-full lg:w-[50%] px-6 py-4">
 
-                            <input type="text" name="" id="" placeholder='Edit Book Title' className='w-full bg-white p-2 rounded-lg' />
-                            <input type="text" name="" id="" placeholder='Edit Author' className='w-full bg-white p-2 rounded-lg mt-2' />
-                            <select name="type" id="type" className="bg-white p-2 rounded-lg mt-2">
+                        <p className='text-3xl text-white font-bold pb-4'>Edit Details</p>
+
+                        <div className='flex flex-col w-full space-y-3'>
+
+                            <input type="text"
+                                name="title"
+                                id=""
+                                placeholder='Book Title'
+                                className='w-full bg-white p-2 rounded-lg' />
+
+                            <input type="text"
+                                name="author"
+                                id=""
+                                placeholder='Author'
+                                className='w-full bg-white p-2 rounded-lg' />
+
+                            <input type="text"
+                                name="year"
+                                id=""
+                                placeholder='Publication Year' className='w-full bg-white p-2 rounded-lg' />
+
+                            {/* <select name="type" id="type" className="bg-white p-2 rounded-lg mt-2">
                                 <option selected disabled>Choose Category</option>
                                 <option value="drama">Anime</option>
                                 <option value="tech">Adventure</option>
@@ -30,22 +47,20 @@ export default function EditBook() {
                                 <option value="tech">Learning ABCs</option>
                                 <option value="tech">History</option>
                                 <option value="tech">Picture Books</option>
-                            </select>
+                            </select> */}
 
-                            <input type="text" name="" id="" placeholder='Edit Description' className='w-full h-[15vh] bg-white p-2 rounded-lg mt-2' />
 
                         </div>
 
-                        <form className="flex justify-center items-center text-sm gap-2 pt-6">
-                            <button type="submit" className="border-1 px-8 py-3 border-radius- text-white rounded-md hover:bg-white hover:text-[#FF1616] cursor-pointer">Confirm Changes</button>
-                        </form>
+                        <div className="flex justify-center items-center text-sm">
+                            <button
+                                type="submit"
+                                className="border border-white px-6 py-3 text-white rounded-md hover:bg-white hover:text-[#FF1616] bg-transparent transition">Confirm Changes</button>
+                        </div>
 
                     </form>
 
-
-
                 </div>
-
 
             </section>
             <Footer />
