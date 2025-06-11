@@ -53,11 +53,11 @@ export default function Navbar() {
           <div className="flex flex-col gap-5 p-3 mt-27">
             <h3></h3>
             <ul className="flex flex-col gap-1">
-              <li><a className="text-gray-700 hover:text-red-600 font-semibold text-xs" href="">Bedtime Stories</a></li>
-              <li><a className="text-gray-700 hover:text-red-600 font-semibold text-xs" href="">Adventure</a></li>
-              <li><a className="text-gray-700 hover:text-red-600 font-semibold text-xs" href="">Anime</a></li>
-              <li><a className="text-gray-700 hover:text-red-600 font-semibold text-xs" href="">Comics & Graphic Novels</a></li>
-              <li><a className="text-gray-700 hover:text-red-600 font-semibold text-xs" href="">Learning ABCs & Numbers</a></li>
+              <li><a className="text-gray-700 hover:text-red-600 font-semibold text-xs" href="#">Bedtime Stories</a></li>
+              <li><a className="text-gray-700 hover:text-red-600 font-semibold text-xs" href="#">Adventure</a></li>
+              <li><a className="text-gray-700 hover:text-red-600 font-semibold text-xs" href="#">Anime</a></li>
+              <li><a className="text-gray-700 hover:text-red-600 font-semibold text-xs" href="#">Comics & Graphic Novels</a></li>
+              <li><a className="text-gray-700 hover:text-red-600 font-semibold text-xs" href="#">Learning ABCs & Numbers</a></li>
             </ul>
           </div>
 
