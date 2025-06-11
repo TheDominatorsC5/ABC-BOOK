@@ -25,21 +25,36 @@ export default function ViewBook() {
     <>
       <Navbar />
       <section>
-        <div className='flex bg-[#FF1616] w-[60%] mx-auto my-6'>
+        <div className='flex flex-col lg:flex-row bg-[#FF1616] w-[90%] lg:w-[80%] xl:w-[60%] mx-auto my-6 overflow-hidden'>
 
-          <div id='edit-image' className='items-start w-[70%] py-6 pl-14'>
-            <img src="https://preview.colorlib.com/theme/abcbook/assets/img/gallery/best-books1.jpg" alt=" book cover" />
+          <div id='edit-image' className='w-full lg:w-[50%] flex justify-center items-start p-6'>
+            <img src="https://preview.colorlib.com/theme/abcbook/assets/img/gallery/best-books1.jpg" 
+            alt=" book cover" 
+            className='w-full h-auto object-cover rounded-lg' />
           </div>
 
-          <form onSubmit={postBook} id="" class="flex flex-col justify-around items-start mt-10 h-[50vh] w-[95%] mx-auto">
-            <p className='text-2xl text-white font-semibold pb-6'>Create Book</p>
-            <div className='flex flex-col w-[75%]'>
+          <form onSubmit={postBook} id="" className="flex flex-col justify-around items-start h-[vh] w-full lg:w-[50%] px-6 py-4">
 
-              <input type="text" name="title" id="" placeholder='Book Title' className='w-full bg-white p-2 rounded-lg' />
+            <p className='text-3xl text-white font-bold pb-4'>Create Book</p>
 
-              <input type="text" name="author" id="" placeholder='Author' className='w-full bg-white p-2 rounded-lg mt-2' />
+            <div className='flex flex-col w-full space-y-1'>
 
-              <input type="text" name="year" id="" placeholder='Publication Year' className='w-full bg-white p-2 rounded-lg mt-2' />
+              <input type="text" 
+              name="title" 
+              id="" 
+              placeholder='Book Title' 
+              className='w-full bg-white p-2 rounded-lg' />
+
+              <input type="text" 
+              name="author" 
+              id="" 
+              placeholder='Author' 
+              className='w-full bg-white p-2 rounded-lg' />
+
+              <input type="text" 
+              name="year" 
+              id="" 
+              placeholder='Publication Year' className='w-full bg-white p-2 rounded-lg' />
 
               {/* <select name="type" id="type" className="bg-white p-2 rounded-lg mt-2">
                 <option selected disabled>Choose Category</option>
@@ -55,17 +70,20 @@ export default function ViewBook() {
                 <option value="tech">Picture Books</option>
               </select> */}
 
-              <input type="text" name="" id="" placeholder='Description' className='w-full h-[10vh] bg-white p-2 rounded-lg mt-2' />
+            </div>
+
+            <div className='pt-4 flex flex-col sm:flex-row sm:items-center gap-4 w-full'>
+              <input type="text" 
+              placeholder="Choose file URL" 
+              name="image" 
+              className="bg-white px-6 py-3 text-zinc-700 rounded-md w-full sm:w-auto" />
+
+              <button 
+              type="submit" 
+              className="border border-white px-6 py-3 text-white rounded-md hover:bg-white hover:text-[#FF1616] bg-transparent transition">Add Book</button>
 
             </div>
 
-            <div className='pt-6'>
-              <input type="text" placeholder="Choose file URL" name="image" className="bg-white border-1 px-6 py-3 text-zinc-500 rounded-md cursor-pointer" />
-
-              <button type="submit" className="border-1 px-6 py-3 border-radius text-white rounded-md hover:bg-white hover:text-[#FF1616] cursor-pointer ml-4">Add Book</button>
-
-            </div>
-            
           </form>
 
         </div>
