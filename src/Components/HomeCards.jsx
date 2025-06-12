@@ -3,9 +3,12 @@ import { Star } from "lucide-react";
 export default function HomeCards({ books }) {
 
   return (
-    <section className="py-13 grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto max-w-6xl">
+    <section className="py-20 mt-12 grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto max-w-6xl">
       {books.map((book) => (
-        <div key={book.id} className=" rounded-lg shadow-md overflow-hidden bg-gray-100">
+        <div key={book.id} className=" relative rounded-lg shadow-md overflow-hidden bg-gray-100">
+          <div className="rounded-sm bg-[#F87171] py-1 px-2 text-white text-sm font-semibold absolute right-0">
+            <span>Feature</span>
+          </div>
           <a href="/viewbook">
             <img src={book.imageUrl} alt={book.title} className="w-full h-96 object-cover rounded-t-md" />
           </a>
