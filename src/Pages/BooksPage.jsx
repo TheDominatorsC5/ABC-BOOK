@@ -8,8 +8,6 @@ import { apiClient } from '../api/client';
 import { useState, useEffect } from 'react';
 
 export default function BooksPage() {
-  // Dummy book array (for now, just to repeat the same BookCard)
-  // const books = [1, 2, 3, 4];
 
   const [books, setBooks] = useState([]);
 
@@ -33,35 +31,35 @@ export default function BooksPage() {
       <Navbar />
 
       <section>
-        
-          <div
-            className="w-full relative overflow-hidden bg-center bg-no-repeat bg-contain"
-            style={{
-              backgroundImage: `url(${kidsBanner})`,
-              paddingBottom: '40.25%',
-            }}
-          >
-            <div className="absolute inset-0 flex flex-col gap-0 items-center justify-center text-center text-violet-600 p-8">
-              <p className='font-bold mt-2 mb-0 p-0'
-                style={{ fontSize: 'clamp(1.25rem, 4vw, 2.8rem)' }}
-              >
-                Find a Book
-              </p>
-              <p className='font-semibold mt-0 p-0'
-                style={{ fontSize: 'clamp(0.875rem, 2vw, 1.8rem)' }}
-              >
-                Welcome to the ABC Books Page!
-              </p>
-            </div>
-          </div>
 
-          <div className="mr-16 flex-shrink-0 justify-items-end">
-
-            <Link to="/createbook" className="group block text-center hover:scale-110 transition-transform duration-600 ease-in-out text-sm md:text-base p-2 md:p-0">
-              <Plus className="text-slate-700 border-2 rounded-full stroke-2 size-10 xs:size-8 group-hover:text-red-700 mx-auto" />
-              <p className='text-sm font-semibold mt-2 text-slate-700 group-hover:text-red-700 mx-auto whitespace-nowrap'>Add Book</p>
-            </Link>
+        <div
+          className="w-full relative overflow-hidden bg-center bg-no-repeat bg-contain"
+          style={{
+            backgroundImage: `url(${kidsBanner})`,
+            paddingBottom: '40.25%',
+          }}
+        >
+          <div className="absolute inset-0 flex flex-col gap-0 items-center justify-center text-center text-violet-600 p-8">
+            <p className='font-bold mt-2 mb-0 p-0'
+              style={{ fontSize: 'clamp(1.25rem, 4vw, 2.8rem)' }}
+            >
+              Find a Book
+            </p>
+            <p className='font-semibold mt-0 p-0'
+              style={{ fontSize: 'clamp(0.875rem, 2vw, 1.8rem)' }}
+            >
+              Welcome to the ABC Books Page!
+            </p>
           </div>
+        </div>
+
+        <div className="mr-16 flex-shrink-0 justify-items-end">
+
+          <Link to="/createbook" className="group block text-center hover:scale-110 transition-transform duration-600 ease-in-out text-sm md:text-base p-2 md:p-0">
+            <Plus className="text-slate-700 border-2 rounded-full stroke-2 size-10 xs:size-8 group-hover:text-red-700 mx-auto" />
+            <p className='text-sm font-semibold mt-2 text-slate-700 group-hover:text-red-700 mx-auto whitespace-nowrap'>Add Book</p>
+          </Link>
+        </div>
 
       </section>
 
@@ -70,7 +68,7 @@ export default function BooksPage() {
         <div className="book-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 p-4 mx-8">
           {books.map(book => {
             return (
-              <BooksCards key={book._id} book={book} />
+              <BooksCards key={book.id} book={book} />
             );
           })}
         </div>
@@ -81,7 +79,7 @@ export default function BooksPage() {
         <div className="book-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 p-4 mx-8">
           {books.map(book => {
             return (
-              <BooksCards key={book._id} book={book} />
+              <BooksCards key={book.id} book={book} />
             );
           })}
         </div>
@@ -92,7 +90,7 @@ export default function BooksPage() {
         <div className="book-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 p-4 mx-8">
           {books.map(book => {
             return (
-              <BooksCards key={book._id} book={book} />
+              <BooksCards key={book.id} book={book} />
             );
           })}
         </div>
@@ -103,7 +101,7 @@ export default function BooksPage() {
         <div className="book-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 p-4 mx-8">
           {books.map(book => {
             return (
-              <BooksCards key={book._id} book={book} />
+              <BooksCards key={book.id} book={book} />
             );
           })}
         </div>
@@ -114,7 +112,7 @@ export default function BooksPage() {
         <div className="book-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 p-4 mx-8">
           {books.map(book => {
             return (
-              <BooksCards key={book._id} book={book} />
+              <BooksCards key={book.id} book={book} />
             );
           })}
         </div>
@@ -125,7 +123,7 @@ export default function BooksPage() {
         <div className="book-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 p-4 mx-8">
           {books.map(book => {
             return (
-              <BooksCards key={book._id} book={book} />
+              <BooksCards key={book.id} book={book} />
             );
           })}
         </div>
@@ -136,7 +134,7 @@ export default function BooksPage() {
         <div className="book-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 p-4 mx-8">
           {books.map(book => {
             return (
-              <BooksCards key={book._id} book={book} />
+              <BooksCards key={book.id} book={book} />
             );
           })}
         </div>
@@ -147,7 +145,7 @@ export default function BooksPage() {
         <div className="book-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 p-4 mx-8">
           {books.map(book => {
             return (
-              <BooksCards key={book._id} book={book} />
+              <BooksCards key={book.id} book={book} />
             );
           })}
         </div>
@@ -158,7 +156,7 @@ export default function BooksPage() {
         <div className="book-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 p-4 mx-8">
           {books.map(book => {
             return (
-              <BooksCards key={book._id} book={book} />
+              <BooksCards key={book.id} book={book} />
             );
           })}
         </div>
@@ -169,7 +167,7 @@ export default function BooksPage() {
         <div className="book-cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 p-4 mx-8">
           {books.map(book => {
             return (
-              <BooksCards key={book._id} book={book} />
+              <BooksCards key={book.id} book={book} />
             );
           })}
         </div>
