@@ -5,7 +5,7 @@ import { Link } from "react-router";
 export default function Navbar() {
   return (
     <header>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between mb-5">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between mb-5 mt-20">
         <div className="flex items-center gap-1">
           <div>
             <img className="w-70 h-35 flex shrink-0" src={logo} alt="Logo" />
@@ -42,7 +42,7 @@ export default function Navbar() {
       </div>
       <nav>
 
-        <ul className="flex justify-center gap-15 bg-red-100 p-2">
+        <ul className="flex justify-center gap-15 bg-red-200 p-4 fixed top-0 left-0 w-full shadow-lg z-50">
           <li className="hover:scale-125 transition-transform duration-600 ease-in-out"><Link className="font-semibold text-sm text-gray-700 hover:text-red-600 " to="/"><House /> Home</Link></li>
           <li className='hover:scale-125 transition-transform duration-600 ease-in-out'><Link className="text-gray-700 hover:text-red-600 font-semibold text-sm" to="/bookspage"><LibraryBig />Categories</Link></li>
           <li className='hover:scale-125 transition-transform duration-600 ease-in-out'><Link className="text-gray-700 hover:text-red-600 font-semibold text-sm" to="/viewbook"><BookOpen />Book</Link></li>

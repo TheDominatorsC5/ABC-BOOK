@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 export default function Navbar() {
   return (
-    <footer id="footer" className="bg-red-50">
+    <footer id="footer" className="bg-red-200">
 
       <div className="max-w-7xl mx-auto px-4">
 
