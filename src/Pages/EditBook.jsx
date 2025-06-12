@@ -33,7 +33,14 @@ export default function EditBook() {
                             <input type="text"
                                 name="year"
                                 id=""
-                                placeholder='Publication Year' className='w-full bg-white p-2 rounded-lg' />
+                                placeholder='Publication Year'
+                                className='w-full bg-white p-2 rounded-lg' />
+
+                            <textarea
+                                name="description"
+                                id=""
+                                placeholder='Description'
+                                className='w-full bg-white p-3 rounded-lg h-[15vh]'></textarea>
 
                             {/* <select name="type" id="type" className="bg-white p-2 rounded-lg mt-2">
                                 <option selected disabled>Choose Category</option>

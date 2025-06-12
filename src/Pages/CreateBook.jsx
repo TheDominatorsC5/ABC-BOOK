@@ -37,7 +37,7 @@ export default function ViewBook() {
 
             <p className='text-3xl text-white font-bold pb-4'>Create Book</p>
 
-            <div className='flex flex-col w-full space-y-1'>
+            <div className='flex flex-col w-full space-y-3'>
 
               <input type="text" 
               name="title" 
@@ -49,12 +49,19 @@ export default function ViewBook() {
               name="author" 
               id="" 
               placeholder='Author' 
-              className='w-full bg-white p-2 rounded-lg' />
+              className='w-full bg-white p-3 rounded-lg' />
 
               <input type="text" 
               name="year" 
               id="" 
-              placeholder='Publication Year' className='w-full bg-white p-2 rounded-lg' />
+              placeholder='Publication Year' 
+              className='w-full bg-white p-3 rounded-lg' />
+
+              <textarea 
+              name="description" 
+              id=""
+              placeholder='Description'
+              className='w-full bg-white p-3 rounded-lg h-[15vh]'></textarea>
 
               {/* <select name="type" id="type" className="bg-white p-2 rounded-lg mt-2">
                 <option selected disabled>Choose Category</option>
