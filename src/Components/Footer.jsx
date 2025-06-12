@@ -74,9 +74,9 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className="text-gray-700 font-bold flex flex-col items-center gap-5">
-        <h4 className=" hover:text-red-600 hover:underline"><Mail />Email: abcchildrensbookstore@gmail.com</h4>
-        <h4 className=" hover:text-red-600 hover:underline"><PhoneCall />Phone: +233 5473 89723</h4>
+      <div className="text-gray-700 text-center font-semibold gap-5 text-xs ml-10 ">
+        <h4 className=" hover:text-red-600 hover:underline">Email: abcchildrensbookstore@gmail.com</h4>
+        <h4 className=" hover:text-red-600 hover:underline">Phone: +233 5473 89723</h4>
       </div>
       
       <p className="p-3 text-center text-xs mt-10 text-black">Copyright© 2025 All rights reserved | by ABC Children's Bookstore</p>
