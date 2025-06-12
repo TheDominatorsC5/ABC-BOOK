@@ -1,7 +1,46 @@
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import { useSearchParams } from 'react-router';
+import { apiClient } from '../api/client';
+import { useEffect, useState } from 'react';
 
 export default function EditBook() {
+    const [searchParams] = useSearchParams();
+    const id = searchParams.get('id');
+
+    const [book, setBook] = useState({});
+
+    const getBook = () => {
+        apiClient.get(`/books/${id}`)
+            .then((response) => {
+                console.log(response.data);
+                setBook(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    }
+
+    useEffect(getBook, []);
+
+    const putBook = (event) => {
+        event.preventDefault();
+        // Collect form input
+        const data = new FormData(event.target);
+        // Post data to API
+        apiClient.put(`/books/${id}`, data, {
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    }
+
     return (
         <>
             <Navbar />
@@ -12,7 +51,7 @@ export default function EditBook() {
                         <img src="https://preview.colorlib.com/theme/abcbook/assets/img/gallery/best_selling5.jpg" alt=" book cover" className='w-full h-auto object-cover rounded-lg' />
                     </div>
 
-                    <form id="" className="flex flex-col justify-around items-start w-full lg:w-[50%] px-6 py-4">
+                    <form onSubmit={putBook} className="flex flex-col justify-around items-start w-full lg:w-[50%] px-6 py-4">
 
                         <p className='text-3xl text-white font-bold pb-4'>Edit Details</p>
 
@@ -20,27 +59,34 @@ export default function EditBook() {
 
                             <input type="text"
                                 name="title"
-                                id=""
                                 placeholder='Book Title'
-                                className='w-full bg-white p-2 rounded-lg' />
+                                defaultValue={book.title}
+                                className='w-full bg-white p-2 rounded-lg'
+                            />
 
                             <input type="text"
                                 name="author"
-                                id=""
                                 placeholder='Author'
+                                defaultValue={book.author}
                                 className='w-full bg-white p-2 rounded-lg' />
 
                             <input type="text"
                                 name="year"
-                                id=""
                                 placeholder='Publication Year'
+                                defaultValue={book.year}
                                 className='w-full bg-white p-2 rounded-lg' />
 
                             <textarea
                                 name="description"
-                                id=""
                                 placeholder='Description'
-                                className='w-full bg-white p-3 rounded-lg h-[15vh]'></textarea>
+                                defaultValue={book.description}
+                                className='w-full bg-white p-2 rounded-lg h-[15vh]'></textarea>
+
+                            <input type="text"
+                                placeholder="Choose file URL"
+                                name="image"
+                                defaultValue={book.image}
+                                className="bg-white px-6 py-3 text-zinc-700 rounded-md w-full sm:w-auto" />
 
                             {/* <select name="type" id="type" className="bg-white p-2 rounded-lg mt-2">
                                 <option selected disabled>Choose Category</option>
@@ -59,7 +105,7 @@ export default function EditBook() {
 
                         </div>
 
-                        <div className="flex justify-center items-center text-sm">
+                        <div className="flex justify-center items-center text-sm pt-4">
                             <button
                                 type="submit"
                                 className="border border-white px-6 py-3 text-white rounded-md hover:bg-white hover:text-[#FF1616] bg-transparent transition">Confirm Changes</button>

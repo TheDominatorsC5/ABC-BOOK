@@ -43,7 +43,7 @@ export default function ViewBook() {
               name="title" 
               id="" 
               placeholder='Book Title' 
-              className='w-full bg-white p-2 rounded-lg' />
+              className='w-full bg-white p-3 rounded-lg' />
 
               <input type="text" 
               name="author" 
