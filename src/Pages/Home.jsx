@@ -8,7 +8,7 @@ export default function Home() {
         {
             id: 1,
             title: 'Book One',
-            imageUrl: 'https://i.pinimg.com/736x/3a/dc/ff/3adcff7a670cde2ea2bb8ceadb6cceac.jpg',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdpKSRkmMZGoJZIFT_jPzMrD4Pzp9QvrWOWw&s',
             description: 'This is a description of Book One.',
             rating: 4.5,
             author: 'Author One',
@@ -17,7 +17,7 @@ export default function Home() {
         {
             id: 2,
             title: 'Book Two',
-            imageUrl: 'https://preview.colorlib.com/theme/abcbook/assets/img/gallery/best_selling4.jpg',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBkFSyw5xNET_FkUjRWq1dNERFLFt33Q7WxQ&s',
             description: 'This is a description of Book Two.',
             rating: 4.0,
             author: 'Author Two',
@@ -26,7 +26,7 @@ export default function Home() {
         {
             id: 3,
             title: 'Book Three',
-            imageUrl: 'https://preview.colorlib.com/theme/abcbook/assets/img/gallery/best_selling5.jpg',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSifv1tUUBe3ZPRZ80cY0Bx0NKns6YsHpyGog&s',
             description: 'This is a description of Book Three.',
             rating: 3.5,
             author: 'Author Three',
@@ -35,7 +35,7 @@ export default function Home() {
         {
             id: 4,
             title: 'Book Four',
-            imageUrl: 'https://preview.colorlib.com/theme/abcbook/assets/img/gallery/best_selling6.jpg',
+            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS46DbWOGjUADspZTfZRqWM1YmDmJgIrRpQHw&s',
             description: 'This is a description of Book Four.',
             rating: 5.0,
             author: 'Author Four',
