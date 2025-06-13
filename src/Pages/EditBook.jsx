@@ -47,10 +47,10 @@ export default function EditBook() {
                 <div className='flex flex-col lg:flex-row bg-[#FF1616] w-[90%] lg:w-[80%] xl:w-[60%] mx-auto my-6 overflow-hidden'>
 
                     <div id='edit-image' className='w-full lg:w-[50%] flex justify-center items-start p-6'>
-                        <img 
-                        src={book.image} 
-                        alt=" book cover" 
-                        className='w-full h-auto object-cover rounded-lg' />
+                        <img
+                            src={book.image}
+                            alt=" book cover"
+                            className='w-full h-auto object-cover rounded-lg' />
                     </div>
 
                     <form action={patchBook} className="flex flex-col justify-around items-start w-full lg:w-[50%] px-6 py-4">
