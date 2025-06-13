@@ -1,4 +1,4 @@
-import { House, LibraryBig, BookOpen, Contact, CircleUserRound } from 'lucide-react';
+import { House, LibraryBig, BookOpen, Contact, CircleUserRound, } from 'lucide-react';
 import logo from "../assets/images/logo.png";
 import { Link } from "react-router";
 
@@ -45,7 +45,7 @@ export default function Navbar() {
         <ul className="flex justify-center gap-15 bg-red-200 p-4 fixed top-0 left-0 w-full shadow-lg z-50">
           <li className="hover:scale-125 transition-transform duration-600 ease-in-out"><Link className="font-semibold text-sm text-gray-700 hover:text-red-600 " to="/"><House /> Home</Link></li>
           <li className='hover:scale-125 transition-transform duration-600 ease-in-out'><Link className="text-gray-700 hover:text-red-600 font-semibold text-sm" to="/bookspage"><LibraryBig />Categories</Link></li>
-          <li className='hover:scale-125 transition-transform duration-600 ease-in-out'><Link className="text-gray-700 hover:text-red-600 font-semibold text-sm" to="/viewbook"><BookOpen />Book</Link></li>
+          <li className='hover:scale-125 transition-transform duration-600 ease-in-out'><Link className="text-gray-700 hover:text-red-600 font-semibold text-sm" to="/createbook"><BookOpen />Book</Link></li>
           <li className='hover:scale-125 transition-transform duration-600 ease-in-out'><a className="text-gray-700 hover:text-red-600 font-semibold text-sm" href="#footer"><Contact />Contact</a></li>
         </ul>
 
