@@ -14,7 +14,6 @@ export default function BooksCards({ book }) {
 
       <div className='flex justify-between items-center font-semibold'>
         <div>
-          <p className='mt-1 mx-4 text-orange-800'>25$</p>
           <p className="text-sm text-gray-500 mt-1">Published: <br />{book.year}</p>
         </div>
         <div>
