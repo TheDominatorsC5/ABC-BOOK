@@ -30,8 +30,8 @@ export default function CreateBook() {
 
           <div id='edit-image' className='w-full lg:w-[50%] flex justify-center items-start p-6'>
             <img 
-            src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBkFSyw5xNET_FkUjRWq1dNERFLFt33Q7WxQ&s"
-            alt=" book cover" 
+            // src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBkFSyw5xNET_FkUjRWq1dNERFLFt33Q7WxQ&s"
+            // alt=" book cover" 
             className='w-full h-auto object-cover rounded-lg' />
           </div>
 
