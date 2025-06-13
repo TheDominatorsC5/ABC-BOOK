@@ -47,22 +47,19 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <div className='flex flex-col items-center justify-center px-24'>
-                <img src="https://i.pinimg.com/736x/4b/a0/29/4ba029d7dc0d448bc9497c1ff995c779.jpg" alt="" className='w-full h-[90vh] object-cover relative z-10' />
+            <div className='flex flex-col items-center justify-center px-4 md:px-24 transform hover:scale-105 transition-transform duration-500 ease-in-out'>
+                <img src="https://i.pinimg.com/736x/4b/a0/29/4ba029d7dc0d448bc9497c1ff995c779.jpg" alt="" className='w-full h-44 md:h-[90vh] object-cover relative z-10' />
             </div>
-            <div className='animate_animated animate-bounce animate_delay-2s flex flex-col items-center justify-center px-24'>
+            <div className='animate_animated animate-bounce animate_delay-2s flex flex-col items-center justify-center px-6 md:px-24'>
                 <h1 className="text-center text-4xl font-bold mt-8 word-spacing-3">Welcome To{' '}
                     <span className='text-[#0A78A0]'>A</span>
                     <span className='text-[#8EC81E]'>B</span>
                     <span className='text-[#D12A2F]'>C</span>{' '}
                     <span className='text-[#F87171]'>BOOKS</span> Store</h1>
             </div>
-            <div className='flex flex-col absolute left-0'>
-                <h1 className='mx-24 text-center text-2xl font-bold mt-20 word-spacing-3'>
-                    Featured This Week
-                </h1>
-            </div>
-
+            <h1 className='mx-4 md:mx-24 text-2xl font-bold word-spacing-3 mt-20'>
+                Featured This Week
+            </h1>
 
             <HomeCards books={books} />
             <Footer />
